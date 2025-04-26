@@ -34,7 +34,9 @@ src/main/resources
 
 ---
 
-## Database Schema (included in student_directory.sql)
+## Database Schema
+
+**(Included in `student_db_setup.sql`)**
 
 ```sql
 CREATE DATABASE  IF NOT EXISTS `student_repository`;
