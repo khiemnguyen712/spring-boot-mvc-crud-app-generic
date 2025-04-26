@@ -21,10 +21,7 @@ public class Student {
     @Column(name="email")
     private String email;
 
-
-    // define constructors
     public Student() {
-
     }
 
     public Student(String firstName, String lastName, String email) {
@@ -32,8 +29,6 @@ public class Student {
         this.lastName = lastName;
         this.email = email;
     }
-
-    // define getter/setter
 
     public int getId() {
         return id;
@@ -67,21 +62,12 @@ public class Student {
         this.email = email.toLowerCase();
     }
 
+    // to convert email to lowercase
+    // GPT generated
     @PrePersist
     @PreUpdate
     private void formatEmail() {
         this.email = this.email.toLowerCase();
-    }
-
-    // define toString
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
     }
 }
 
