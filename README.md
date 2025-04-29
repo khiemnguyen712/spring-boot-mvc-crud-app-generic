@@ -6,10 +6,10 @@ This is a **Spring Boot** web application that follows the **MVC architecture**.
 
 ## Technologies Used
 
-- Spring Web
+- Spring Web (Expose REST endpoints)
 - Spring Data JPA
-- Thymeleaf  
-- Bootstrap 5
+- Spring security
+- Thymeleaf, Bootstrap
 - MySQL
 
 ---
@@ -28,15 +28,14 @@ src/main/java
 src/main/resources
  ├── templates         # Thymeleaf HTML templates (student form and view page)
  ├── static            # Static resources (CSS - Bootstrap)
- ├── application.properties
- └── student_db_setup.sql # SQL script to create the student table
+ └── application.properties
 ```
 
 ---
 
 ## Database Schema
 
-**(Included in `student_db_setup.sql`)**
+**(Included in `student_directory.sql`)**
 
 ```sql
 CREATE DATABASE  IF NOT EXISTS `student_repository`;
