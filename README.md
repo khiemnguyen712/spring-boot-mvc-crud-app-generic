@@ -1,12 +1,12 @@
-# Student Management System
+# Spring Boot MVC CRUD Application
 
-This is a **Spring Boot** web application that follows the **MVC architecture**. It uses **Thymeleaf** for server-side rendering and **Bootstrap** for basic styling. The application interacts with a **MySQL** database through **Spring Data JPA** and provides full **Create, Read, Update, Delete (CRUD)** operations for managing a database of students.
+Built using **Spring Boot** following the **MVC architecture** with **Thymeleaf** for server-side rendering and **Bootstrap** for basic styling. The application provides full Create, Read, Update, Delete (CRUD) features on a **MySQL** database through **Spring Data JPA**.
 
 ---
 
 ## Technologies Used
 
-- Spring Web (Expose REST endpoints)
+- Spring Web
 - Spring Data JPA
 - Spring security
 - Thymeleaf, Bootstrap
