@@ -30,7 +30,7 @@ public class StudentController {
         return "student-list";
     }
 
-    // To show the ADD form
+    // Direct to ADD form
     @GetMapping("/add-student")
     public String addStudentForm(Model model) {
 
@@ -41,7 +41,7 @@ public class StudentController {
         return "student-form";
     }
 
-    // To show the UPDATE form
+    // Direct to UPDATE form
     @GetMapping("/update-student")
     public String updateStudentForm(@RequestParam("studentId") int id, Model model) {
 
@@ -52,6 +52,7 @@ public class StudentController {
         return "student-form";
     }
 
+    // Redirect to homepage after DELETE
     @GetMapping("/delete-student")
     public String deleteStudent(@RequestParam("studentId") int id, Model model) {
 
@@ -60,7 +61,7 @@ public class StudentController {
         return "redirect:/students/list";
     }
 
-    // To process the ADD or UPDATE
+    // Redirect to homepage after ADD or UPDATE
     @PostMapping("/save")
     public String processStudentForm(@ModelAttribute("student") Student student) {
 

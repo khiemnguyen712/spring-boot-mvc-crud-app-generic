@@ -17,26 +17,28 @@ public class StudentService{
         studentRepository = theEmployeeRepository;
     }
 
-    // List all students
+    // Return all student
     public List<Student> findAll() {
         return studentRepository.findAll();
     }
 
-    // List one student by ID
+    // Return one student by ID
+    // TODO: bad practice to return student
     public Student findById(int theId) {
-        Optional<Student> result = studentRepository.findById(theId);
 
-        Student theStudent = null;
+        Optional<Student> studentFound = studentRepository.findById(theId);
 
-        if (result.isPresent()) {
-            theStudent = result.get();
+        Student student = null;
+
+        if (studentFound.isPresent()) {
+            student = studentFound.get();
         }
         else {
             // we didn't find the employee
             throw new RuntimeException("Did not find employee id - " + theId);
         }
 
-        return theStudent;
+        return student;
     }
 
     public void save(Student theStudent) { studentRepository.save(theStudent);}
